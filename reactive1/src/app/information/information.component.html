@@ -1,0 +1,367 @@
+<p>information works!</p>
+
+<!--Basic information form starts from below-->
+
+<br>
+<div class="container">
+ <!--<div *ngIf="flag1"></div>-->
+  <div>
+    <h1 style="text-align: center;">Basic Information</h1>
+    <form [formGroup]="Basic!" (ngSubmit)="OnBasicInformation()">
+      <br>
+      <div class="row">
+        <div class="form-group col-md-6">
+    <label>Employee no:<span class="lblError">*</span></label>
+      <div class="form-control">
+      <input formControlName="Employee_no" placeholder="Employee number" type="text" class="form-control">
+      <!--<p class="lblError" *ngIf="Basic!.get('Employee_no').hasError('required') && !Basic!.get('Employee_no').pristine"> Employe number is required.</p>-->
+      </div>
+       <div>
+
+            <div class="row">
+        <div class="form-group col-md-6">
+          <label>Title:<span class="lblError">*</span></label>
+          <div class="form-control">
+            <input formControlName= "Title" placeholder="Enter Title" type="text" class="form-control">
+            <!--<p class="lblError" *ngIf="Basic!.get('Title').hasError('required') && !Basic!.get('Title').pristine"> Title is required.</p>-->
+          </div>
+          <div>
+
+          <div class="row">
+          <div class="form-group col-md-6">
+          <label>Addressed As:<span class="lblError">*</span></label>
+          <div class="form-control">
+          <input formControlName= "Addressed_as" placeholder="Addressed" type="text" class="form-control">
+          <!--<p class="lblError" *ngIf="Basic!.get('Addressed_as').hasError('required') && !Basic!.get('Addressed_as').pristine"> Addressed is required.</p>-->
+           </div>
+            <div>
+
+            <div class="row">
+            <div class="form-group col-md-6">
+            <label>First Name:<span class="lblError">*</span></label>
+            <div class="form-control">
+            <input formControlName= "First_Name" placeholder="Enter First Name" type="text" class="form-control">
+            <!--<p class="lblError" *ngIf="Basic!.get('First_Name').hasError('required') && !Basic!.get('First_Name').pristine"> First Name is required.</p>-->
+            </div>
+            <div>
+
+            <div class="row">
+            <div class="form-group col-md-6">
+            <label>Middle Name:<span class="lblError">*</span></label>
+            <div class="form-control">
+           <input formControlName= "Middle_Name" placeholder="Enter Middle Name" type="text" class="form-control">
+           <!--<p class="lblError" *ngIf="Basic!.get('Middle_Name').hasError('required') && !Basic!.get('Middle_Name').pristine"> Middle_Name is required.</p>-->
+            </div>
+            <div>
+
+            <div class="row">
+             <div class="form-group col-md-6">
+            <label>Last Name:<span class="lblError">*</span></label>
+           <div class="form-control">
+          <input formControlName= "Last_Name" placeholder="Enter Last Name" type="text" class="form-control">
+          <!--<p class="lblError" *ngIf="Basic!.get('Last_Name').hasError('required') && !Basic!.get('Last_Name').pristine"> Last Namer is required.</p>-->
+            </div>
+            <div>
+
+
+            <div class="row">
+            <div class="form-group col-md-6">
+            <label>Initials:<span class="lblError">*</span></label>
+            <div class="form-control">
+            <input formControlName= "Initials" placeholder="Enter Initials" type="text" class="form-control">
+            <!--<p class="lblError" *ngIf="Basic!.get('Initials').hasError('required') && !Basic!.get('Initials').pristine"> Initials number is required.</p>-->
+            </div>
+            <div>
+
+          <div class="row">
+          <div class="form-group col-md-3">
+          <label>Gender:</label> <br>
+          <input type="radio" formControlName="user_gender" value="Female" >Female
+          <input type="radio"  formControlName="user_gender" value="Male" >Male
+          </div>
+
+  <div class="form-group col-md-3">
+  <label>Date of birth:<span class="lblError">*</span></label>
+  <div class="controls">
+  <input formControlName="dob"  type="date" placeholder="age" class="form-control">
+  </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="form-group col-md-3">
+  <label>Employee Age:<span></span></label>
+  <div class="form-control">
+  <input formControlName="Employee_Age" placeholder="age" value={{age}} type="text" class="form-control">
+  <!--<p class="lblError" *ngIf="Basic.get('Employee_Age').hasError('required') && !Basic.get('Employee_Age').pristine"> Field is required.</p>-->
+  </div>
+  </div>
+
+  <div class="form-group col-md-3">
+    <label>Official Phone:<span class="lblError"></span></label>
+    <div class="form-control">
+    <input formControlName="Official_Phone" placeholder="Enter Phone" type="text" class="form-control">
+    <!--<p class="lblError" *ngIf="Basic.get('Official_Phone').hasError('required') && !Basic.get('Official_Phone').pristine"> Field is required.</p>-->
+    </div>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label>Personal Mobile:<span class="lblError">*</span></label>
+      <div class="controls">
+      <input formControlName="Personal_Mobile" placeholder="Enter Personal Mobile" type="text" class="form-control">
+      <!--<p class="lblError" *ngIf="Basic.get('Personal_Mobile').hasError('required') && !BasicInformation.get('Personal_Mobile').pristine"> Field is required.</p>-->
+      </div>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label>Fax:<span class="lblError"></span></label>
+        <div class="controls">
+        <input formControlName="Fax" placeholder="Enter Fax" type="text" class="form-control">
+        <!--<p class="lblError" *ngIf="Basic.get('Fax').hasError('required') && !Basic.get('Fax').pristine"> Field is required.</p>-->
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-3">
+        <label>Official Email:<span class="lblError"></span></label>
+        <div class="controls">
+        <input formControlName="Official_Email" placeholder="Enter Official Email" type="text" class="Official_Email">
+        <!--<p class="lblError" *ngIf="Basic.get('Official_Email').hasError('required') && !Basic.get('Official_Email').pristine"> Field is required.</p>-->
+        </div>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label>Personal Email:<span class="lblError">*</span></label>
+          <div class="controls">
+          <input formControlName="Personal_Email" placeholder="Enter Personal Email" type="text" class="Personal_Email">
+         <!--<p class="lblError" *ngIf="Basic.get('Personal_Email').hasError('required') && !Basic.get('Personal_Email').pristine"> Field is required.</p>-->
+          </div>
+          </div>
+
+          <div class="form-group col-md-3">
+            <label>Personal Email 2:<span class="lblError"></span></label>
+            <div class="controls">
+            <input formControlName="Personal_Email_2" placeholder="Enter Personal Email 2" type="text" class="Personal_Email_2">
+            <!--<p class="lblError" *ngIf="Basic.get('Personal_Email_2').hasError('required') && !Basic.get('Personal_Email_2').pristine"> Field is required.</p>-->
+           </div>
+            </div>
+
+            <div class="form-group">
+            <label>Personal Email 3:<span class="lblError"></span></label>
+            <div class="controls">
+            <input formControlName="Personal_Email_3" placeholder="Enter Personal Email 3" type="text" class="Personal_Email_3">
+            <!--<p class="lblError" *ngIf="Basic.get('Personal_Email_3').hasError('required') && !Basic.get('Personal_Email_3').pristine"> Field is required.</p>-->
+            </div>
+            </div>
+          </div>
+
+          <br>
+
+ <div class="form-group">
+<label>Upload Photo:</label>
+<div class="controls">
+<input formControlName="file" placeholder="Photo File" type="file" class="file" accept="image/*" multiple>
+<!--<p class="lblError" *ngIf="BasicInformation.get('file').hasError('required') && !BasicInformation.get('file').pristine"> Field is required.</p>-->
+</div>
+</div>
+
+<br><h5 class="text-danger">*indicates the fields are mandatory</h5>
+
+
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!--Address Details form starts from below-->
+<div class="container">
+  <!--<div *ngIf="flag1"></div>-->
+  <div>
+<form [formGroup]="AddressDetails" (ngSubmit)="OnAddressDetails()"></form>
+  <h1 style="text-align: center;">Address Details</h1><br>
+  <br>
+  <h1>Permanent Address</h1><br>
+
+  <div class="row">
+    <div class="form-group col-md-6">
+    <label>Address Permanent:<span class="lblError">*</span></label>
+    <div class="controls">
+    <input formControlName="Permanent_Address" placeholder="Enter Address" type="text" class="form-control">
+   <!--<p class="lblError" *ngIf="AddressDetails.get('Permanent_Address').hasError('required') && !AddressDetails.get('Permanent_Address').pristine">The fields are mandatory.</p>-->
+    </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>City:<span class="lblError">*</span></label>
+      <div class="controls">
+      <input formControlName="City" placeholder="Enter City" type="text" class="form-control">
+     <!--<p class="lblError" *ngIf="AddressDetails.get('City').hasError('required') && !AddressDetails.get('City').pristine">The fields are mandatory.</p>-->
+      </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-4">
+      <label>Country:</label> <br>
+      <select formControlName="Country" class="form-control">
+      <option value="">Select</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="Canada">Canada</option>
+      </select>
+      <!--<p class="lblError" *ngIf="AddressDetails.get('Country').hasError('required') && !AddressDetails.get('Country').pristine">Select Country.</p>-->
+      </div>
+
+      <div class="form-group col-md-4">
+        <label>State:</label> <br>
+        <select formControlName="State" class="form-control">
+        <option value="">Select</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Pune">Pune</option>
+        </select>
+        <!--<p class="lblError" *ngIf="AddressDetails.get('State').hasError('required') && !AddressDetails.get('State').pristine">Select State.</p>-->
+        </div>
+
+        <div class="form-group col-md-4">
+          <label>District:</label> <br>
+          <select formControlName="District" class="form-control">
+          <option value="">Select</option>
+          <option value="thane">Thane</option>
+          <option value="Malabar_hills">Malabar hills</option>
+          <option value="Karnataka">Karnataka</option>
+          </select>
+          <!--<p class="lblError" *ngIf="AddressDetails.get('District').hasError('required') && !AddressDetails.get('District').pristine">Select District.</p>-->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Pin:<span class="lblError"></span></label>
+          <div class="controls">
+          <input formControlName="Pin" placeholder="Enter Pin" type="text" class="form-control">
+          <!--<p class="lblError" *ngIf="AddressDetails.get('Pin').hasError('required') && !AddressDetails.get('Pin').pristine"> The fields are mandatory.</p>-->
+          </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-md-3">
+            <label>Phone1:<span class="lblError"></span></label>
+            <div class="controls">
+            <input formControlName="Phone1" placeholder="Enter Number" type="text" class="form-control">
+            <!--<p class="lblError" *ngIf="AddressDetails.get('Phone1').hasError('required') && !AddressDetails.get('Phone1').pristine"> The fields are mandatory.</p>-->
+            </div>
+            </div>
+
+            <div class="form-group col-md-3">
+              <label>Phone2:<span class="lblError"></span></label>
+              <div class="controls">
+              <input formControlName="Phone2" placeholder="Enter Number" type="text" class="form-control">
+              <!--<p class="lblError" *ngIf="AddressDetails.get('Phone2').hasError('required') && !AddressDetails.get('Phone2').pristine"> The fields are mandatory.</p>-->
+              </div>
+              </div>
+
+            <div class="form-group col-md-3">
+              <label>Fax/Mobile:<span class="lblError"></span></label>
+              <div class="controls">
+              <input formControlName="Fax_Mobile" placeholder="Enter Fax & Mobile" type="text" class="form-control">
+              <!--<p class="lblError" *ngIf="AddressDetails.get('Fax_Mobile').hasError('required') && !AddressDetails.get('Fax_Mobile').pristine"> The fields are mandatory.</p>-->
+              </div>
+              </div>
+
+              <div class="form-group col-md-3">
+                <label>Personal Email ID:<span class="lblError"></span></label>
+                <div class="controls">
+                <input formControlName="Personal_Email" placeholder="Enter Email" type="text" class="form-control">
+               <!--<p class="lblError" *ngIf="AddressDetails.get('Personal_Email').hasError('required') && !AddressDetails.get('Personal_Email').pristine"> The fields are mandatory.</p>-->
+                </div>
+                </div>
+              </div>
+
+          <div class="form-check">
+            <input formControlName="form" class="form-check-input" type="checkbox" value="">
+            <label class="form-check-label" for="TaskSeven">
+              Same to Permanent Address
+            </label><br><br>
+          </div>
+
+
+
+          <div class="row">
+            <div class="form-group col-md-6">
+            <label>Address Permanent:<span class="lblError">*</span></label>
+            <div class="controls">
+            <input formControlName="PpAddress" placeholder="Enter Address" value={{Address Permanent}} type="text" class="form-control">
+            <!--<p class="lblError" *ngIf="AddressDetails.get('ppaddress').hasError('required') && !AddressDetails.get('ppaddress').pristine">The fields are mandatory.</p>-->
+            </div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>City:<span class="lblError">*</span></label>
+              <div class="controls">
+              <input formControlName="PCity" placeholder="Enter City" value={{City}} type="text" class="form-control">
+            <!--<p class="lblError" *ngIf="AddressDetails.get('Personal_Permanent_Address').hasError('required') && !AddressDetails.get('Personal_Permanent_Address').pristine">The fields are mandatory.</p>-->
+            </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="form-group col-md-3">
+              <label>Country:<span class="lblError">*</span></label>
+              <div class="controls">
+              <input formControlName="PCountry" placeholder="Enter Country"  value={{Country}} type="text" class="form-control">
+             <!--<p class="lblError" *ngIf="AddressDetails.get('PCountry').hasError('required') && !AddressDetails.get('PCountry').pristine">The fields are mandatory.</p>-->
+              </div>
+              </div>
+
+            <div class="row">
+            <div class="form-group col-md-3">
+            <label>State:<span class="lblError">*</span></label>
+            <div class="controls">
+            <input formControlName="PState" placeholder="Enter Country"  value={{State}} type="text" class="form-control">
+            <!--<p class="lblError" *ngIf="AddressDetails.get('PState').hasError('required') && !AddressDetails.get('PState').pristine">The fields are mandatory.</p>-->
+            </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-3">
+              <label>District:<span class="lblError">*</span></label>
+              <div class="controls">
+              <input formControlName="PDistrict" placeholder="Enter Country" value={{District}} type="text" class="form-control">
+              <!--<p class="lblError" *ngIf="AddressDetails.get('PDistrict').hasError('required') && !AddressDetails.get('PDistrict').pristine">The fields are mandatory.</p>-->
+              </div>
+              </div>
+
+              <div class="form-group col-md-3">
+                <label>Pin:<span class="lblError">*</span></label>
+                <div class="controls">
+                <input formControlName="PPin" placeholder="Enter Pin"   type="text" class="form-control">
+                <!--<p class="lblError" *ngIf="AddressDetails.get('PPin').hasError('required') && !AddressDetails.get('PPin').pristine">The fields are mandatory.</p>-->
+                </div>
+                </div>
+              </div>
+
+              <br><h5 class="text-danger">*indicates the fields are mandatory</h5><br>
+
+              <button type="submit" class="btn btn-primary" (click)="onPreviousClick()" >  Previous  </button><br>
+              <button type="submit" class="btn btn-primary" (click)="onNextClick1()" >  Next  </button><br>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
